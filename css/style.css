@@ -1,0 +1,119 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+  header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  nav ul li a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+  }
+  
+  #features, #articles, #glossary, #submit-ideas, #carbon-footprint, #energy-consumption, #water-usage {
+    background-color: white;
+    border-radius: 8px;
+    padding: 3rem;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;  /* Increased width to 90% of the page */
+    max-width: 1500px;  /* Increased max-width */
+    margin: 3rem auto;
+    text-align: center;
+  }
+  
+  #features h2, #articles h2, #glossary h2, #submit-ideas h2, #carbon-footprint h2, #energy-consumption h2, #water-usage h2 {
+    margin-bottom: 1rem;
+  }
+  
+  #submit-ideas form {
+    text-align: center;
+  }
+  
+  #submit-ideas input, #submit-ideas textarea {
+    padding: 12px;
+    margin: 15px 0;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  #submit-ideas button {
+    padding: 12px 25px;
+    background-color: #ff6f61;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #submit-ideas button:hover {
+    background-color: #e55c4d;
+  }
+  
+  #carbon-footprint, #energy-consumption, #water-usage {
+    display: inline-block;
+    width: 65%;  /* Increased width for tools sections */
+    text-align: center;
+    margin: 1rem 2% 3rem 2%;
+    padding: 3rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  a {
+    color: #ff6f61;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  

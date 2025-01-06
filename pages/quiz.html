@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Climate Change Awareness Quiz</title>
+  <link rel="stylesheet" href="quizstyle.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Climate Change Awareness Quiz</h1>
+    <div class="quiz-container">
+      <div id="questionDisplay">
+        <p id="questionText">What is the main cause of climate change?</p>
+      </div>
+      <div class="options">
+        <button onclick="checkAnswer('Greenhouse gas emissions')">Greenhouse gas emissions</button>
+        <button onclick="checkAnswer('Volcanic eruptions')">Volcanic eruptions</button>
+        <button onclick="checkAnswer('Deforestation')">Deforestation</button>
+        <button onclick="checkAnswer('Ocean currents')">Ocean currents</button>
+      </div>
+    </div>
+    <div id="quizResult"></div>
+    <button id="nextButton" onclick="nextQuestion()">Next Question</button>
+  </div>
+
+  <script>
+    const questions = [
+      {
+        question: "What is the primary cause of climate change?",
+        options: ["Greenhouse gas emissions", "Volcanic eruptions", "Deforestation", "Ocean currents"],
+        correctAnswer: "Greenhouse gas emissions"
+      },
+      {
+        question: "Which gas is most responsible for global warming?",
+        options: ["Oxygen", "Carbon dioxide", "Methane", "Nitrogen"],
+        correctAnswer: "Carbon dioxide"
+      },
+      {
+        question: "What is the greenhouse effect?",
+        options: ["Cooling of the Earth's surface", "Warming of the Earth's atmosphere", "Melting of polar ice caps", "Increase in ocean temperature"],
+        correctAnswer: "Warming of the Earth's atmosphere"
+      },
+      {
+        question: "Which of the following is a renewable source of energy?",
+        options: ["Coal", "Natural gas", "Wind", "Oil"],
+        correctAnswer: "Wind"
+      }
+    ];
+
+    let currentQuestionIndex = 0;
+    
+    function loadQuestion() {
+      const currentQuestion = questions[currentQuestionIndex];
+      document.getElementById("questionText").innerText = currentQuestion.question;
+      const optionsContainer = document.querySelector(".options");
+      optionsContainer.innerHTML = '';
+      currentQuestion.options.forEach(option => {
+        const button = document.createElement("button");
+        button.innerText = option;
+        button.onclick = function() { checkAnswer(option); };
+        optionsContainer.appendChild(button);
+      });
+
+      document.getElementById("quizResult").innerText = ''; // Clear previous result
+      document.getElementById("nextButton").style.display = 'none'; // Hide Next button initially
+    }
+
+    function checkAnswer(selectedOption) {
+      const currentQuestion = questions[currentQuestionIndex];
+      const result = selectedOption === currentQuestion.correctAnswer ? 'Correct!' : 'Incorrect!';
+      document.getElementById("quizResult").innerText = result;
+
+      // Show "Next Question" button only after answering
+      document.getElementById("nextButton").style.display = 'inline-block';
+    }
+
+    function nextQuestion() {
+      currentQuestionIndex++;
+      if (currentQuestionIndex < questions.length) {
+        loadQuestion();
+      } else {
+        document.getElementById("quizResult").innerText = 'You have completed the quiz!';
+        document.getElementById("nextButton").style.display = 'none'; // Hide Next button after last question
+      }
+    }
+
+    // Load the first question when the page loads
+    loadQuestion();
+  </script>
+</body>
+</html>

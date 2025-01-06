@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carbon Footprint Calculator</title>
+  <link rel="stylesheet" href="../css/stylecbfp.css">
+</head>
+<body>
+  <header>
+    <h1>Carbon Footprint Calculator</h1>
+  </header>
+
+  <main>
+    <section id="carbon-calculator">
+      <h2>Calculate Your Carbon Footprint</h2>
+      <form id="carbon-form">
+        <label for="transport">Monthly Transportation (in km):</label>
+        <input type="number" id="transport" name="transport" required>
+
+        <label for="energy">Monthly Energy Consumption (in kWh):</label>
+        <input type="number" id="energy" name="energy" required>
+
+        <label for="waste">Monthly Waste Generation (in kg):</label>
+        <input type="number" id="waste" name="waste" required>
+
+        <button type="submit">Calculate</button>
+      </form>
+
+      <div id="result">
+        <!-- Result will appear here -->
+      </div>
+    </section>
+  </main>
+
+
+
+  <script src="../js/carbon-footprint.js"></script>
+</body>
+</html>

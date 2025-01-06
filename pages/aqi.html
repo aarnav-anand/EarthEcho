@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AQI & Temperature</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styleaqi.css">
+</head>
+<body>
+  <header>
+    <h1>AQI and Temperature Reports</h1>
+    <p>Check out data from different cities or submit your own report to help track air quality.</p>
+  </header>
+
+  <main>
+    <section id="data-form">
+      <h2>Post AQI and Temperature</h2>
+      <form id="aqi-form">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" placeholder="Enter city name" required>
+        
+        <label for="aqi">AQI:</label>
+        <input type="number" id="aqi" name="aqi" placeholder="Enter AQI value" required>
+        
+        <label for="temperature">Temperature (°C):</label>
+        <input type="number" id="temperature" name="temperature" placeholder="Enter temperature" required>
+        
+        <button type="submit">Post Data</button>
+      </form>
+    </section>
+
+    <section id="posted-data">
+      <h2>Posted Data</h2>
+      <div id="data-list">
+        <!-- Data will be displayed here dynamically -->
+      </div>
+    </section>
+  </main>
+
+  <script src="../js/aqi.js"></script>
+</body>
+</html>
